@@ -1,0 +1,23 @@
+= RxJava2 STuff
+
+These are my builds of the source examples in Victor Grazi's InfoQ article: https://www.infoq.com/articles/rxjava2-by-example
+
+It is a very good read!
+
+== Maven users
+
+
+== Gradle users
+
+
+
+== The examples
+
+
+=== Running the examples
+
+==== Running in your IDE
+
+
+==== Running at the command line
+
