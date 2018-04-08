@@ -5,7 +5,7 @@ import io.reactivex.Observable;
 import java.util.Arrays;
 import java.util.List;
 
-public class ObservableExample2 {
+public class ObservableExample02 {
 
     public static void main(String[] args) {
 

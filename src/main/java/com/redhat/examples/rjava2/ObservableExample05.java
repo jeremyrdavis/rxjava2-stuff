@@ -5,9 +5,9 @@ import io.reactivex.Observable;
 import java.util.Arrays;
 import java.util.List;
 
-public class ObservalbeExample1 {
+public class ObservableExample05 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         List<String> words = Arrays.asList(
                 "the",
@@ -21,9 +21,11 @@ public class ObservalbeExample1 {
                 "dogs"
         );
 
-        System.out.println("Use the Just operator to print out only the words");
-
-        Observable.just(words).subscribe(System.out::println);
+        Observable.fromIterable(words)
+                .flatMap(word -> Observable.fromArray(word.split("")))
+                .zipWith(Observable.range(1, Integer.MAX_VALUE), (string, count) -> String.format("%2d. %s", count, string))
+                .subscribe(System.out::println);
 
     }
+
 }
